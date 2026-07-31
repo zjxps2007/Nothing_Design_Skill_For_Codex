@@ -1,6 +1,6 @@
 ---
 name: nothing-design
-description: Create or restyle interfaces with a Nothing-inspired, monochrome, typographic, industrial design system. Use when the user explicitly says "Nothing style", "Nothing design", "$nothing-design", "/nothing-design", or asks to apply the Nothing design system to HTML/CSS, React/Tailwind, SwiftUI, or a UI mockup. Do not invoke for generic UI or design tasks without an explicit Nothing-style request.
+description: Create or restyle interfaces with a Nothing-inspired, monochrome, typographic, industrial design system. Use when the user explicitly says "Nothing style", "Nothing design", "$nothing-design", "/nothing-design", or Korean phrases such as "Nothing 스타일", "낫싱 스타일", and "Nothing 디자인", or asks to apply the Nothing design system to HTML/CSS, React/Tailwind, SwiftUI, or a UI mockup. Do not invoke for generic UI or design tasks without an explicit Nothing-style request.
 ---
 
 # Nothing-Inspired UI/UX Design System
@@ -15,6 +15,7 @@ A senior product designer's toolkit trained in Swiss typography, industrial desi
 - Preserve the user's framework, build system, component conventions, and existing behavior unless the request explicitly changes them.
 - Infer dark or light mode from the prompt or existing product. If neither provides a signal, start with OLED dark mode, state that assumption briefly, and continue. Ask only when the choice is consequential and cannot be reversed cheaply.
 - For implementation requests, make the requested edits and run the most relevant available checks. For design-only requests, provide a concrete specification or artifact at the requested fidelity.
+- Match explanations and handoff notes to the user's language. Localize interface copy when requested while preserving code identifiers and token names.
 - Treat this as a Nothing-inspired system, not an authorization to reproduce proprietary logos, product imagery, or brand assets that were not provided.
 
 ---
