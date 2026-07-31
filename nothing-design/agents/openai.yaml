@@ -1,0 +1,4 @@
+interface:
+  display_name: "Nothing Design"
+  short_description: "Build precise Nothing-inspired interfaces"
+  default_prompt: "Use $nothing-design to restyle this interface with a precise Nothing-inspired design system."
