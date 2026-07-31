@@ -4,7 +4,7 @@ A Codex skill inspired by Nothing's visual language. Monochrome, typographic, in
 
 This repository is a Codex-compatible adaptation of [dominikmartn/nothing-design-skill](https://github.com/dominikmartn/nothing-design-skill). It packages Swiss typography, OLED blacks, segmented progress bars, and dot-matrix motifs into a reusable interface-design workflow.
 
-![FIELDWORK greenhouse dashboard demo](preview.jpg)
+![Animated FIELDWORK greenhouse dashboard demo](preview.gif)
 
 ## What you get
 
