@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="FIELDWORK — an original Nothing-inspired environmental control dashboard demo."
+    />
+    <title>FIELDWORK / Node 07</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Doto:wght@400;500;600&amp;family=Space+Grotesk:wght@300;400;500&amp;family=Space+Mono:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="frame" aria-label="FIELDWORK environmental control dashboard">
+      <header class="topbar">
+        <a class="identity" href="#overview" aria-label="FIELDWORK overview">
+          <span class="identity__mark" aria-hidden="true"><i></i><i></i></span>
+          <span>
+            <strong>FIELDWORK</strong>
+            <small>SEOUL / NODE 07</small>
+          </span>
+        </a>
+
+        <div class="topbar__meta">
+          <span><i class="status-dot" aria-hidden="true"></i> SYSTEM ONLINE</span>
+          <time id="clock" datetime="2026-08-01T03:17:00+09:00">03:17:42 KST</time>
+          <button class="mode-button" id="modeButton" type="button" aria-pressed="false">
+            MODE / DARK
+          </button>
+        </div>
+      </header>
+
+      <main id="overview">
+        <section class="hero" aria-labelledby="heroTitle">
+          <div class="hero__copy">
+            <p class="eyebrow">CANOPY AIR / LIVE READING</p>
+            <h1 id="heroTitle">21.8<span>°C</span></h1>
+            <p class="hero__status"><span>[ STABLE ]</span> OPTIMAL BAND 20—24°C</p>
+
+            <dl class="hero__details">
+              <div>
+                <dt>LAST SAMPLE</dt>
+                <dd>08 SEC AGO</dd>
+              </div>
+              <div>
+                <dt>24H DRIFT</dt>
+                <dd>+0.4°C</dd>
+              </div>
+              <div>
+                <dt>SENSOR</dt>
+                <dd>CAN-A07</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="air-loop" aria-label="Air exchange is at 72 percent">
+            <svg viewBox="0 0 240 240" role="img" aria-labelledby="loopTitle loopDesc">
+              <title id="loopTitle">Air exchange</title>
+              <desc id="loopDesc">Air exchange is operating at 72 percent.</desc>
+              <circle class="air-loop__track" cx="120" cy="120" r="82" />
+              <circle class="air-loop__value" cx="120" cy="120" r="82" />
+              <path class="air-loop__axis" d="M120 18v26M120 196v26M18 120h26M196 120h26" />
+            </svg>
+            <div class="air-loop__reading">
+              <span>AIR EXCHANGE</span>
+              <strong>72<small>%</small></strong>
+              <span>2.4 CYCLES / HR</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="instrument-grid" aria-label="Environmental instruments">
+          <article class="panel panel--moisture">
+            <div class="panel__heading">
+              <div>
+                <p class="eyebrow">ROOT ZONE / A</p>
+                <h2>Soil moisture</h2>
+              </div>
+              <p class="panel__value">68<small>%</small></p>
+            </div>
+
+            <div class="segments" aria-label="Soil moisture 68 percent">
+              <i class="is-filled"></i><i class="is-filled"></i><i class="is-filled"></i>
+              <i class="is-filled"></i><i class="is-filled"></i><i class="is-filled"></i>
+              <i class="is-filled"></i><i class="is-filled"></i><i class="is-filled"></i>
+              <i class="is-filled"></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+
+            <dl class="metric-row">
+              <div><dt>DEW POINT</dt><dd>12.4°C</dd></div>
+              <div><dt>LIGHT</dt><dd>540 LX</dd></div>
+              <div><dt>RESERVOIR</dt><dd>18.2 L</dd></div>
+            </dl>
+          </article>
+
+          <article class="panel panel--control">
+            <div class="panel__heading">
+              <div>
+                <p class="eyebrow">MECHANICAL / 02</p>
+                <h2>Roof vent</h2>
+              </div>
+              <span class="alert-state" id="ventStatus">[ OPEN ]</span>
+            </div>
+
+            <button
+              class="mechanical-switch is-open"
+              id="ventButton"
+              type="button"
+              aria-pressed="true"
+              aria-label="Close roof vent"
+            >
+              <span>VENT</span>
+              <i aria-hidden="true"></i>
+              <small>MANUAL</small>
+            </button>
+          </article>
+
+          <article class="panel panel--schedule">
+            <div class="panel__heading">
+              <div>
+                <p class="eyebrow">AUTOMATION / NEXT</p>
+                <h2>Field log</h2>
+              </div>
+              <span class="quiet-state">03 EVENTS</span>
+            </div>
+
+            <ol class="event-list">
+              <li><time datetime="04:00">04:00</time><span>MIST CYCLE</span><small>90 SEC</small></li>
+              <li><time datetime="05:30">05:30</time><span>SHADE RETRACT</span><small>EAST</small></li>
+              <li><time datetime="06:10">06:10</time><span>IRRIGATION</span><small>ZONE A</small></li>
+            </ol>
+          </article>
+        </section>
+      </main>
+
+      <footer>
+        <span>FIELDWORK ENVIRONMENTAL SYSTEMS</span>
+        <span>37.5665° N / 126.9780° E</span>
+        <span>BUILD 08.01 / LOCAL ONLY</span>
+      </footer>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
