@@ -1,6 +1,6 @@
 # Nothing Design Skill
 
-English · [한국어](#한국어-안내)
+**English** · [한국어](./README.ko.md)
 
 A Codex skill inspired by Nothing's visual language. Monochrome, typographic, industrial.
 
@@ -63,51 +63,6 @@ Open `http://localhost:4173/demo/`. The demo includes a dark/light mode control 
 | `references/tokens.md` | Colors, fonts, spacing, motion tokens |
 | `references/components.md` | Buttons, cards, lists, tables, overlays |
 | `references/platform-mapping.md` | HTML/CSS, React/Tailwind, SwiftUI, and mockup mappings |
-
-## 한국어 안내
-
-Nothing의 시각 언어에서 영감을 받은 Codex용 UI 디자인 스킬입니다. 단색 중심의 색상, 강한 타이포그래피 위계, 산업적인 인터페이스를 HTML/CSS, React/Tailwind, SwiftUI 등에 적용할 수 있습니다.
-
-### 주요 기능
-
-- 화면을 주요 정보, 보조 정보, 메타데이터의 세 단계로 구성
-- Doto, Space Grotesk, Space Mono 기반 타이포그래피
-- 다크·라이트 모드 디자인 토큰 제공
-- 분할 진행 표시줄, 기계식 토글, 계기판 형태의 컴포넌트 제공
-- 일반적인 UI 요청에는 자동 적용되지 않으며, Nothing 스타일을 명시적으로 요청할 때 사용
-
-### 설치
-
-저장소 루트에서 다음 명령을 실행합니다.
-
-```sh
-mkdir -p ~/.codex/skills
-cp -R ./nothing-design ~/.codex/skills/
-```
-
-설치 후 새 Codex 작업을 시작하면 스킬이 인식됩니다.
-
-### 사용법
-
-스킬 이름으로 직접 호출할 수 있습니다.
-
-```text
-$nothing-design React와 Tailwind로 반응형 시스템 모니터링 대시보드를 만들어줘.
-```
-
-또는 자연어로 Nothing 스타일을 명시해도 됩니다.
-
-```text
-기존 React 컴포넌트는 유지하고 이 설정 화면을 Nothing 스타일로 변경해줘.
-```
-
-### 데모 실행
-
-```sh
-python3 -m http.server 4173
-```
-
-브라우저에서 `http://localhost:4173/demo/`을 열면 **FIELDWORK / NODE 07** 데모를 확인할 수 있습니다. 다크·라이트 모드 전환과 기계식 환기구 스위치를 직접 조작할 수 있습니다.
 
 ## License
 
