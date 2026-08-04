@@ -1,8 +1,8 @@
-# Nothing Design Skill
+# Nothing Design for Codex
 
 **English** · [한국어](./README.ko.md)
 
-A Codex skill inspired by Nothing's visual language. Monochrome, typographic, industrial.
+A Codex plugin that packages a design skill inspired by Nothing's visual language. Monochrome, typographic, industrial.
 
 This repository is a Codex-compatible adaptation of [dominikmartn/nothing-design-skill](https://github.com/dominikmartn/nothing-design-skill). It packages Swiss typography, OLED blacks, segmented progress bars, and dot-matrix motifs into a reusable interface-design workflow.
 
@@ -18,16 +18,44 @@ Invoke `$nothing-design`, or explicitly ask for "Nothing style", and Codex will 
 - Segmented progress bars, mechanical toggles, instrument-style widgets
 - Output as HTML/CSS, SwiftUI, or React/Tailwind
 
-## Install
+## Install as a Codex plugin (recommended)
 
-Copy the `nothing-design` folder into your Codex skills directory:
+Codex plugins can be installed from a repository marketplace with the Codex CLI. Add this repository, then install the plugin:
+
+```sh
+codex plugin marketplace add zjxps2007/Nothing_Design_Skill_For_Codex
+codex plugin add nothing-design@nothing-design-for-codex
+```
+
+Confirm that it is installed:
+
+```sh
+codex plugin list
+```
+
+Start a new Codex task so the skill is discovered. In the Codex app, you can also open **Plugins**, select **Nothing Design for Codex** after adding the marketplace, and choose **Install**.
+
+See the official [plugin packaging guide](https://developers.openai.com/plugins/build/plugins) and [Codex plugin CLI reference](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-codex-plugin) for details.
+
+### Update
+
+Refresh the marketplace and reinstall the latest available version:
+
+```sh
+codex plugin marketplace upgrade nothing-design-for-codex
+codex plugin add nothing-design@nothing-design-for-codex
+```
+
+### Manual skill install
+
+If your Codex version does not yet include plugin commands, clone this repository and copy the packaged skill into your Codex skills directory:
 
 ```sh
 mkdir -p ~/.codex/skills
-cp -R ./nothing-design ~/.codex/skills/
+cp -R ./plugins/nothing-design/skills/nothing-design ~/.codex/skills/
 ```
 
-Run these commands from this adapted checkout. Start a new Codex task after installation so the skill is discovered.
+Run the manual install commands from this repository's root, then start a new Codex task.
 
 ## Use
 
@@ -57,12 +85,14 @@ Open `http://localhost:4173/demo/`. The demo includes a dark/light mode control 
 
 | File | |
 |------|---|
-| `SKILL.md` | Design philosophy, craft rules, workflow |
-| `agents/openai.yaml` | Codex UI metadata and default invocation prompt |
+| `.agents/plugins/marketplace.json` | Repository marketplace used by `codex plugin` |
+| `plugins/nothing-design/.codex-plugin/plugin.json` | Codex plugin manifest |
+| `plugins/nothing-design/skills/nothing-design/SKILL.md` | Design philosophy, craft rules, workflow |
+| `plugins/nothing-design/skills/nothing-design/agents/openai.yaml` | Codex UI metadata and default invocation prompt |
 | `demo/` | Original responsive HTML/CSS/JS demo |
-| `references/tokens.md` | Colors, fonts, spacing, motion tokens |
-| `references/components.md` | Buttons, cards, lists, tables, overlays |
-| `references/platform-mapping.md` | HTML/CSS, React/Tailwind, SwiftUI, and mockup mappings |
+| `plugins/nothing-design/skills/nothing-design/references/tokens.md` | Colors, fonts, spacing, motion tokens |
+| `plugins/nothing-design/skills/nothing-design/references/components.md` | Buttons, cards, lists, tables, overlays |
+| `plugins/nothing-design/skills/nothing-design/references/platform-mapping.md` | HTML/CSS, React/Tailwind, SwiftUI, and mockup mappings |
 
 ## License
 

@@ -1,0 +1,20 @@
+{
+  "name": "nothing-design-for-codex",
+  "interface": {
+    "displayName": "Nothing Design for Codex"
+  },
+  "plugins": [
+    {
+      "name": "nothing-design",
+      "source": {
+        "source": "local",
+        "path": "./plugins/nothing-design"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

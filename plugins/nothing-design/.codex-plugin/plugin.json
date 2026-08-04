@@ -1,0 +1,36 @@
+{
+  "name": "nothing-design",
+  "version": "1.0.0",
+  "description": "Create Nothing-inspired monochrome, typographic, industrial interfaces in Codex.",
+  "author": {
+    "name": "zjxps2007",
+    "url": "https://github.com/zjxps2007"
+  },
+  "homepage": "https://github.com/zjxps2007/Nothing_Design_Skill_For_Codex",
+  "repository": "https://github.com/zjxps2007/Nothing_Design_Skill_For_Codex",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "design-system",
+    "ui",
+    "nothing-inspired"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Nothing Design",
+    "shortDescription": "Build precise Nothing-inspired interfaces",
+    "longDescription": "Create or restyle interfaces with a monochrome, typographic, industrial design system for HTML/CSS, React/Tailwind, SwiftUI, and UI mockups.",
+    "developerName": "zjxps2007",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/zjxps2007/Nothing_Design_Skill_For_Codex",
+    "defaultPrompt": [
+      "Use $nothing-design to restyle this interface.",
+      "Build a Nothing-inspired dashboard.",
+      "Apply the Nothing design system to this UI."
+    ]
+  }
+}

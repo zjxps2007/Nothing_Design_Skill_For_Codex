@@ -1,8 +1,8 @@
-# Nothing Design Skill
+# Nothing Design for Codex
 
 [English](./README.md) · **한국어**
 
-Nothing의 시각 언어에서 영감을 받은 Codex용 디자인 스킬입니다. 단색, 타이포그래피 중심, 산업적인 인터페이스를 지향합니다.
+Nothing의 시각 언어에서 영감을 받은 디자인 스킬을 패키징한 Codex 플러그인입니다. 단색, 타이포그래피 중심, 산업적인 인터페이스를 지향합니다.
 
 이 저장소는 [dominikmartn/nothing-design-skill](https://github.com/dominikmartn/nothing-design-skill)을 Codex에서 사용할 수 있도록 수정한 버전입니다. 스위스 타이포그래피, OLED 블랙, 분할 진행 표시줄, 도트 매트릭스 모티프를 재사용 가능한 인터페이스 디자인 워크플로로 제공합니다.
 
@@ -18,16 +18,44 @@ Nothing의 시각 언어에서 영감을 받은 Codex용 디자인 스킬입니�
 - 분할 진행 표시줄, 기계식 토글, 계기판 형태의 컴포넌트 제공
 - HTML/CSS, SwiftUI, React/Tailwind 출력 지원
 
-## 설치
+## Codex 플러그인으로 설치 (권장)
 
-`nothing-design` 폴더를 Codex 스킬 디렉터리에 복사합니다.
+Codex 플러그인은 Codex CLI에서 저장소 마켓플레이스를 추가한 뒤 바로 설치할 수 있습니다.
+
+```sh
+codex plugin marketplace add zjxps2007/Nothing_Design_Skill_For_Codex
+codex plugin add nothing-design@nothing-design-for-codex
+```
+
+설치 여부를 확인합니다.
+
+```sh
+codex plugin list
+```
+
+스킬이 인식되도록 새 Codex 작업을 시작하세요. Codex 앱에서는 마켓플레이스를 추가한 뒤 **Plugins**에서 **Nothing Design for Codex**를 선택하고 **Install**을 눌러 설치할 수도 있습니다.
+
+자세한 내용은 공식 [플러그인 패키징 안내](https://developers.openai.com/plugins/build/plugins)와 [Codex 플러그인 CLI 명령어](https://learn.chatgpt.com/docs/developer-commands?surface=cli#cli-codex-plugin)를 참고하세요.
+
+### 업데이트
+
+마켓플레이스를 새로 고친 뒤 최신 버전을 다시 설치합니다.
+
+```sh
+codex plugin marketplace upgrade nothing-design-for-codex
+codex plugin add nothing-design@nothing-design-for-codex
+```
+
+### 스킬 수동 설치
+
+사용 중인 Codex 버전이 아직 플러그인 명령을 지원하지 않는다면, 이 저장소를 클론한 뒤 패키지 안의 스킬을 Codex 스킬 디렉터리로 복사하세요.
 
 ```sh
 mkdir -p ~/.codex/skills
-cp -R ./nothing-design ~/.codex/skills/
+cp -R ./plugins/nothing-design/skills/nothing-design ~/.codex/skills/
 ```
 
-이 저장소의 루트에서 명령을 실행하세요. 설치 후 새 Codex 작업을 시작하면 스킬이 인식됩니다.
+수동 설치 명령은 이 저장소의 루트에서 실행하고, 설치 후 새 Codex 작업을 시작하세요.
 
 ## 사용법
 
@@ -59,12 +87,14 @@ python3 -m http.server 4173
 
 | 파일 | 설명 |
 |------|------|
-| `SKILL.md` | 디자인 철학, 제작 규칙, 작업 흐름 |
-| `agents/openai.yaml` | Codex UI 메타데이터와 기본 호출 프롬프트 |
+| `.agents/plugins/marketplace.json` | `codex plugin`에서 사용하는 저장소 마켓플레이스 |
+| `plugins/nothing-design/.codex-plugin/plugin.json` | Codex 플러그인 매니페스트 |
+| `plugins/nothing-design/skills/nothing-design/SKILL.md` | 디자인 철학, 제작 규칙, 작업 흐름 |
+| `plugins/nothing-design/skills/nothing-design/agents/openai.yaml` | Codex UI 메타데이터와 기본 호출 프롬프트 |
 | `demo/` | 반응형 HTML/CSS/JavaScript 데모 |
-| `references/tokens.md` | 색상, 글꼴, 간격, 모션 토큰 |
-| `references/components.md` | 버튼, 카드, 목록, 표, 오버레이 패턴 |
-| `references/platform-mapping.md` | HTML/CSS, React/Tailwind, SwiftUI, 목업 매핑 |
+| `plugins/nothing-design/skills/nothing-design/references/tokens.md` | 색상, 글꼴, 간격, 모션 토큰 |
+| `plugins/nothing-design/skills/nothing-design/references/components.md` | 버튼, 카드, 목록, 표, 오버레이 패턴 |
+| `plugins/nothing-design/skills/nothing-design/references/platform-mapping.md` | HTML/CSS, React/Tailwind, SwiftUI, 목업 매핑 |
 
 ## 라이선스
 
